@@ -1,5 +1,6 @@
 package com.sriyank.shoestore.UI.view
 
+import android.content.Context.MODE_PRIVATE
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -26,6 +27,15 @@ class LoginFragment : Fragment() {
         binding.login.setOnClickListener {
                 view: View ->
                 view.findNavController().navigate(R.id.action_loginFragment_to_shoeListFragment)
+
+            val prefs = requireActivity().getSharedPreferences(
+                "logger",
+                MODE_PRIVATE
+            )
+            val prefsEditor = prefs.edit()
+            prefsEditor.putString("logged", "login")
+            prefsEditor.apply()
+
         }
 
         //Go To Shoe List Fragment

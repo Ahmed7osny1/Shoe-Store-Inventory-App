@@ -1,5 +1,6 @@
 package com.sriyank.shoestore.UI.view
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -24,9 +25,17 @@ class InstructionsFragment : Fragment() {
         binding.nextInstruction.setOnClickListener {
             view: View ->
             view.findNavController().navigate(R.id.action_instructionsFragment_to_loginFragment)
+            onBoardingFinished()
         }
 
         return binding.root
+    }
+
+    private fun onBoardingFinished(){
+        val sharedPref = requireActivity().getSharedPreferences("onBoarding", Context.MODE_PRIVATE)
+        val editor = sharedPref.edit()
+        editor.putBoolean("Finished", true)
+        editor.apply()
     }
 
 }
