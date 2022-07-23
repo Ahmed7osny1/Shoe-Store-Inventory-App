@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="ShoViewModel"
+            type="com.sriyank.shoestore.viewModel.ShoeViewModel" />
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        tools:context=".models.CreateShoeFragment"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/create_shoe_title"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="italic|bold"
+            android:fontFamily="@font/antonregular"
+            android:textSize="30sp"
+            android:textColor="#BC4644"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nameBox"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="370dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="40dp"
+            android:hint="@string/enter_your_shoe_name"
+            android:importantForAutofill="no"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:textInputLayoutFocusedRectEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="text"
+            android:textColorHint="#78909C"
+            android:textSize="20sp"
+            android:textStyle="bold|italic" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/companyBox"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="370dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="30dp"
+            android:hint="@string/enter_your_company_name"
+            android:importantForAutofill="no"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:textInputLayoutFocusedRectEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="text"
+                android:textColorHint="#78909C"
+                android:textSize="20sp"
+                android:textStyle="bold|italic" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/sizeBox"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="370dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="30dp"
+            android:hint="@string/enter_your_shoe_size"
+            android:importantForAutofill="no"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:textInputLayoutFocusedRectEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="text"
+                android:textColorHint="#78909C"
+                android:textSize="20sp"
+                android:textStyle="bold|italic" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/descriptionBox"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="370dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="30dp"
+            android:hint="@string/enter_your_shoe_description"
+            android:importantForAutofill="no"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:textInputLayoutFocusedRectEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="text"
+                android:textColorHint="#78909C"
+                android:textSize="20sp"
+                android:textStyle="bold|italic" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            >
+
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="20dp"
+                android:layout_weight="1"
+                android:layout_marginTop="80dp"
+                android:background="#9A3F3E"
+                android:textSize="20sp"
+                app:backgroundTint="@null"
+                android:text="@string/save"
+                />
+
+            <Button
+                android:id="@+id/cancelButton"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:text="Cancel"
+                android:layout_marginTop="80dp"
+                android:background="#9A3F3E"
+                android:textSize="20sp"
+                app:backgroundTint="@null"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>
